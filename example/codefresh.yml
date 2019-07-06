@@ -7,7 +7,7 @@ steps:
   main_clone:
     type: "git-clone"
     description: "Cloning main repository..."
-    repo: "guysalton-codefresh/greeting"
+    repo: "guysalton-codefresh/k8s-canary-deployment"
     revision: "${{CF_BRANCH}}"
     stage: "clone"
     git: guyGithub
