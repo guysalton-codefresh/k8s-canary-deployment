@@ -18,5 +18,5 @@ steps:
       - NEW_VERSION=${{CF_SHORT_REVISION}}
       - SLEEP_SECONDS=40
       - NAMESPACE=canary
-      - KUBE_CONTEXT=myDemoAKSCluster
+      - KUBE_CONTEXT=aks
   
