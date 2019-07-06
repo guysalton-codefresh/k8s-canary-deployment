@@ -1,6 +1,18 @@
 version: '1.0'
+stages:
+  - "clone"
+  - "build"
+  - "deploy"
 steps:
+  main_clone:
+    type: "git-clone"
+    description: "Cloning main repository..."
+    repo: "guysalton-codefresh/greeting"
+    revision: "${{CF_BRANCH}}"
+    stage: "clone"
+    git: guyGithub
   BuildingDockerImage:
+    stage: "build"
     title: Building Docker Image
     type: build
     image_name: trivial-web
@@ -8,6 +20,7 @@ steps:
     tag: '${{CF_SHORT_REVISION}}'
     dockerfile: Dockerfile
   canaryDeploy:
+    stage: "deploy"
     title: "Deploying new version ${{CF_SHORT_REVISION}}"
     image: codefresh/k8s-canary:master
     environment:
