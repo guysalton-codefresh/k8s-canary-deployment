@@ -29,7 +29,7 @@ steps:
       - DEPLOYMENT_NAME=my-demo-app
       - TRAFFIC_INCREMENT=20
       - NEW_VERSION=${{CF_SHORT_REVISION}}
-      - SLEEP_SECONDS=80
+      - SLEEP_SECONDS=15
       - NAMESPACE=canary
       - KUBE_CONTEXT=aks
   
