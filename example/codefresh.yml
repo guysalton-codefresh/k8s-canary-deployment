@@ -27,9 +27,9 @@ steps:
       - WORKING_VOLUME=.
       - SERVICE_NAME=my-demo-app
       - DEPLOYMENT_NAME=my-demo-app
-      - TRAFFIC_INCREMENT=20
+      - TRAFFIC_INCREMENT=15
       - NEW_VERSION=${{CF_SHORT_REVISION}}
-      - SLEEP_SECONDS=15
+      - SLEEP_SECONDS=7
       - NAMESPACE=canary
       - KUBE_CONTEXT=aks
   
